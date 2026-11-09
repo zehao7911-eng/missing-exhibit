@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#151b21">
+<meta name="description" content="The lights went out. One museum treasure vanished. Can you spot what's missing?">
+<title>Missing Exhibit</title>
+<link rel="icon" href="icon.svg">
+<!-- STYLE -->
+</head>
+<body>
+<main class="cabinet" aria-label="Missing Exhibit">
+  <header class="mast">
+    <div class="wordmark"><span class="emblem" aria-hidden="true">✦</span><div><p>THE NIGHT MUSEUM</p><h1>Missing Exhibit</h1></div></div>
+    <div class="tools">
+      <button class="tool" id="sound" aria-label="Mute sound" title="Sound"></button>
+      <button class="tool" id="map" aria-label="Open gallery map" title="Gallery map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16m6-16v16M3 12h18"/></svg></button>
+    </div>
+  </header>
+  <section class="stage" id="stage" aria-label="Museum display">
+    <div id="art" aria-hidden="true"></div>
+    <div class="roomtag"><span id="room-number"></span><span id="room"></span></div>
+    <div class="steps" id="steps" aria-label="Case progress"></div>
+    <div class="hint" id="status" aria-live="polite"></div>
+    <div class="effect" id="effect" aria-hidden="true"></div>
+  </section>
+  <section class="console" aria-label="Game controls">
+    <p class="eyebrow" id="phase-label"></p>
+    <h2 id="objective"></h2>
+    <div id="choices" class="choices"></div>
+    <button class="primary" id="action"></button>
+    <div class="watchbar" id="watchbar" aria-hidden="true"><i></i></div>
+  </section>
+  <footer><span>AFTER HOURS <b>◆</b> FIELD NOTES</span><span id="collection"></span></footer>
+</main>
+<dialog id="atlas" aria-labelledby="map-title">
+  <div class="dialoghead"><div><p class="eyebrow">NIGHT MUSEUM</p><h2 id="map-title">Gallery map</h2></div><button class="tool" id="close-map" aria-label="Close gallery map">×</button></div>
+  <div id="rooms" class="roomlist"></div>
+  <div id="bonuses" class="bonuses" hidden></div>
+</dialog>
+<!-- SCRIPT -->
+</body>
+</html>
